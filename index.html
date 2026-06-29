@@ -6,14 +6,61 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="BOOGUELS TAP OS">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>BOOGUELS TAP OS V7</title>
+<title>BOOGUELS TAP OS V9</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
-<main class="stage">
-  <img class="master" src="master-v7.png?v=7" alt="BOOGUELS TAP OS V7">
+<main id="app">
+  <section id="tapgrid"></section>
 </main>
-<script src="app.js?v=7"></script>
+
+<div id="modal" class="modal hidden">
+  <form id="tapForm" class="panel">
+    <div class="panelHead">
+      <h2 id="modalTitle">Tap</h2>
+      <button type="button" id="closeBtn">×</button>
+    </div>
+
+    <label>Statut
+      <select id="status">
+        <option value="online">En service</option>
+        <option value="empty">Empty Tap</option>
+      </select>
+    </label>
+
+    <label>Nom
+      <input id="name" autocomplete="off">
+    </label>
+
+    <label>Style
+      <input id="style" autocomplete="off">
+    </label>
+
+    <div class="two">
+      <label>ABV %
+        <input id="abv" autocomplete="off">
+      </label>
+      <label>IBU
+        <input id="ibu" autocomplete="off">
+      </label>
+    </div>
+
+    <label>Houblons / ingrédients
+      <textarea id="extras" rows="4" placeholder="Une ligne par ingrédient"></textarea>
+    </label>
+
+    <label>Couleur accent
+      <input id="accent" type="color">
+    </label>
+
+    <div class="actions">
+      <button type="button" id="emptyBtn">Mettre Empty Tap</button>
+      <button type="submit" class="save">Sauvegarder</button>
+    </div>
+  </form>
+</div>
+
+<script src="app.js?v=9"></script>
 </body>
 </html>
