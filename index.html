@@ -6,9 +6,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="BOOGUELS TAP OS">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>BOOGUELS TAP OS V9</title>
+<title>BOOGUELS TAP OS V10</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 <main id="app">
@@ -47,20 +47,50 @@
     </div>
 
     <label>Houblons / ingrédients
-      <textarea id="extras" rows="4" placeholder="Une ligne par ingrédient"></textarea>
+      <textarea id="extras" rows="3" placeholder="Une ligne par ingrédient"></textarea>
     </label>
 
-    <label>Couleur accent
-      <input id="accent" type="color">
-    </label>
+    <div class="two">
+      <label>Couleur
+        <select id="accent">
+          <option value="cyan">Cyan</option>
+          <option value="red">Rouge</option>
+          <option value="purple">Violet</option>
+          <option value="orange">Orange</option>
+          <option value="green">Vert</option>
+          <option value="blue">Bleu</option>
+          <option value="gold">Or</option>
+          <option value="grey">Gris</option>
+        </select>
+      </label>
+      <label>Verre
+        <select id="glass">
+          <option value="hazy">Hazy IPA</option>
+          <option value="westcoast">West Coast / Pale</option>
+          <option value="pilsner">Pilsner</option>
+          <option value="kolsch">Kölsch</option>
+          <option value="stout">Stout</option>
+          <option value="pastry">Pastry Stout</option>
+          <option value="sour">Sour / Gose</option>
+          <option value="wheat">Wheat</option>
+          <option value="brown">Brown Ale</option>
+          <option value="oldale">Old Ale</option>
+          <option value="barleywine">Barleywine</option>
+          <option value="empty">Verre vide</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="preview" class="preview"></div>
 
     <div class="actions">
-      <button type="button" id="emptyBtn">Mettre Empty Tap</button>
+      <button type="button" id="resetBtn">Reset local</button>
+      <button type="button" id="emptyBtn">Empty Tap</button>
       <button type="submit" class="save">Sauvegarder</button>
     </div>
   </form>
 </div>
 
-<script src="app.js?v=9"></script>
+<script src="app.js?v=10"></script>
 </body>
 </html>

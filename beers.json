@@ -1,5 +1,5 @@
 {
-  "version": "v9-admin",
+  "version": "v10",
   "taps": [
     {
       "tap": 1,
@@ -8,9 +8,9 @@
       "style": "Modern Pale Ale",
       "abv": "5,5",
       "ibu": "29",
-      "extras": "Nectaron\\nKrush",
-      "accent": "#00e5e5",
-      "beer": "gold"
+      "extras": "Nectaron\nKrush",
+      "accent": "cyan",
+      "glass": "westcoast"
     },
     {
       "tap": 2,
@@ -20,8 +20,8 @@
       "abv": "6,8",
       "ibu": "30",
       "extras": "",
-      "accent": "#ff3a20",
-      "beer": "amber"
+      "accent": "red",
+      "glass": "oldale"
     },
     {
       "tap": 3,
@@ -30,9 +30,9 @@
       "style": "Pastry Stout",
       "abv": "8",
       "ibu": "36",
-      "extras": "Fèves cacao\\nVanille\\nTonka",
-      "accent": "#b72cff",
-      "beer": "stout"
+      "extras": "Fèves cacao\nVanille\nTonka",
+      "accent": "purple",
+      "glass": "pastry"
     },
     {
       "tap": 4,
@@ -42,8 +42,8 @@
       "abv": "",
       "ibu": "",
       "extras": "",
-      "accent": "#666666",
-      "beer": "empty"
+      "accent": "grey",
+      "glass": "empty"
     },
     {
       "tap": 5,
@@ -53,8 +53,8 @@
       "abv": "",
       "ibu": "",
       "extras": "",
-      "accent": "#666666",
-      "beer": "empty"
+      "accent": "grey",
+      "glass": "empty"
     },
     {
       "tap": 6,
@@ -64,8 +64,8 @@
       "abv": "",
       "ibu": "",
       "extras": "",
-      "accent": "#666666",
-      "beer": "empty"
+      "accent": "grey",
+      "glass": "empty"
     }
   ]
 }
