@@ -1,5 +1,5 @@
 {
-  "version": "v4",
+  "version": "v5-hybrid",
   "taps": [
     {
       "tap": 1,
@@ -11,11 +11,7 @@
       "extras": [
         "Nectaron",
         "Krush"
-      ],
-      "accent": "#00e7e7",
-      "beer1": "#ffe27a",
-      "beer2": "#f39a12",
-      "foam": "#fff0d6"
+      ]
     },
     {
       "tap": 2,
@@ -24,11 +20,7 @@
       "style": "Modern Old Ale",
       "abv": "6,8",
       "ibu": "30",
-      "extras": [],
-      "accent": "#ff2418",
-      "beer1": "#d74b20",
-      "beer2": "#6b160d",
-      "foam": "#e7b17f"
+      "extras": []
     },
     {
       "tap": 3,
@@ -41,11 +33,7 @@
         "Fèves cacao",
         "Vanille",
         "Tonka"
-      ],
-      "accent": "#b02cff",
-      "beer1": "#22100b",
-      "beer2": "#020101",
-      "foam": "#b67644"
+      ]
     },
     {
       "tap": 4,

@@ -1,6 +1,7 @@
+// BOOGUELS BREW TAPLIST V5 HYBRIDE
+// Cette V5 utilise l'image master premium comme interface plein écran.
+// La prochaine étape consistera à rendre les zones de texte dynamiques au-dessus du master.
 
-const fallback={taps:[{tap:1,status:"online",name:"Back To Brew",style:"Modern Pale Ale",abv:"5,5",ibu:"29",extras:["Nectaron","Krush"],accent:"#00e7e7",beer1:"#ffe27a",beer2:"#f39a12",foam:"#fff0d6"},{tap:2,status:"online",name:"Nutcracker",style:"Modern Old Ale",abv:"6,8",ibu:"30",extras:[],accent:"#ff2418",beer1:"#d74b20",beer2:"#6b160d",foam:"#e7b17f"},{tap:3,status:"online",name:"Darkness",style:"Pastry Stout",abv:"8",ibu:"36",extras:["Fèves cacao","Vanille","Tonka"],accent:"#b02cff",beer1:"#22100b",beer2:"#020101",foam:"#b67644"},{tap:4,status:"empty"},{tap:5,status:"empty"},{tap:6,status:"empty"}]};
-async function load(){try{const r=await fetch("beers.json?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw 0;return await r.json()}catch(e){return fallback}}
-function card(t){const empty=t.status!=="online";return `<section class="card ${empty?'empty':'online'}" data-tap="${t.tap}" style="--accent:${t.accent||'#777'};--beer1:${t.beer1||'#222'};--beer2:${t.beer2||'#111'};--foam:${t.foam||'#ddd'}"><div class="num">${t.tap}</div><div class="info"><div class="name">${empty?'Empty Tap':t.name}</div><div class="style">${empty?'Coming Soon':t.style}</div><div class="rule"></div><div class="stats"><div><div class="value">${empty?'-- %':t.abv+' %'}</div><div class="label">ABV</div></div><div><div class="value">${empty?'--':t.ibu}</div><div class="label">IBU</div></div></div></div><div class="extras">${empty?'':(t.extras||[]).map(x=>`<div>${x}</div>`).join('')}</div><div class="glasswrap"><div class="glass"><div class="beer"></div><div class="foam"></div></div></div></section>`}
-load().then(d=>{document.getElementById("taplist").innerHTML=d.taps.sort((a,b)=>a.tap-b.tap).map(card).join("")});
-if("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js?v=4").catch(()=>{});
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js?v=5").catch(() => {});
+}
