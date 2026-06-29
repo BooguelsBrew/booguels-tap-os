@@ -1,10 +1,10 @@
-const CACHE = 'booguels-v6-master-overlay';
+const CACHE = 'booguels-tap-os-v7';
 const ASSETS = [
   './',
   './index.html',
-  './style.css?v=6',
-  './app.js?v=6',
-  './master.jpg?v=6',
+  './style.css?v=7',
+  './app.js?v=7',
+  './master-v7.png?v=7',
   './manifest.webmanifest',
   './beers.json'
 ];

@@ -33,18 +33,9 @@ body {
   height: 100vh;
   object-fit: cover;
   object-position: center center;
-  transform: translate(-50%, -50%) scale(1.025);
+  transform: translate(-50%, -50%);
   display: block;
   -webkit-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
-}
-
-/* Sécurité pour iPad en paysage : force le plein écran visuel */
-@media (orientation: landscape) {
-  .master {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-  }
 }

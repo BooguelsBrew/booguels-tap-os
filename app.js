@@ -1,7 +1,7 @@
-// BOOGUELS BREW TAPLIST V6 MASTER OVERLAY
-// V6 = version master premium plein écran, avec cache forcé.
-// La prochaine étape pourra ajouter des calques texte dynamiques par-dessus.
+// BOOGUELS TAP OS V7
+// Version master premium affichée en plein écran.
+// beers.json est inclus pour préparer les futures mises à jour dynamiques.
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./sw.js?v=6").catch(() => {});
+  navigator.serviceWorker.register("./sw.js?v=7").catch(() => {});
 }
