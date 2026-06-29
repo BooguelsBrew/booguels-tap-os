@@ -1,4 +1,5 @@
 {
+  "version": "v4",
   "taps": [
     {
       "tap": 1,
@@ -11,10 +12,10 @@
         "Nectaron",
         "Krush"
       ],
-      "accent": "#00e5e5",
-      "beer1": "#ffe66b",
-      "beer2": "#f6a313",
-      "foam": "#fff1d6"
+      "accent": "#00e7e7",
+      "beer1": "#ffe27a",
+      "beer2": "#f39a12",
+      "foam": "#fff0d6"
     },
     {
       "tap": 2,
@@ -24,10 +25,10 @@
       "abv": "6,8",
       "ibu": "30",
       "extras": [],
-      "accent": "#ff2316",
-      "beer1": "#e15423",
-      "beer2": "#6b1d12",
-      "foam": "#f3c49b"
+      "accent": "#ff2418",
+      "beer1": "#d74b20",
+      "beer2": "#6b160d",
+      "foam": "#e7b17f"
     },
     {
       "tap": 3,
@@ -37,14 +38,14 @@
       "abv": "8",
       "ibu": "36",
       "extras": [
-        "Fèves Cacao",
+        "Fèves cacao",
         "Vanille",
         "Tonka"
       ],
-      "accent": "#b72cff",
-      "beer1": "#26140f",
-      "beer2": "#030202",
-      "foam": "#b97848"
+      "accent": "#b02cff",
+      "beer1": "#22100b",
+      "beer2": "#020101",
+      "foam": "#b67644"
     },
     {
       "tap": 4,
