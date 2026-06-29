@@ -1,7 +1,7 @@
 {
   "name": "BOOGUELS BREW TAPLIST",
   "short_name": "Taplist",
-  "start_url": "./index.html?v=5",
+  "start_url": "./index.html?v=6",
   "display": "fullscreen",
   "background_color": "#000000",
   "theme_color": "#000000",

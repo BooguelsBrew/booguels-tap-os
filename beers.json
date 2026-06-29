@@ -1,5 +1,7 @@
 {
-  "version": "v5-hybrid",
+  "version": "v6-master-overlay",
+  "displayMode": "master",
+  "notes": "Master premium plein écran. Overlay dynamique prévu pour la prochaine étape.",
   "taps": [
     {
       "tap": 1,
