@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "BOOGUELS BREW TAPLIST",
+    "subtitle": "6 TAPS • 3 ON TAP • 3 COMING SOON"
+  },
   "taps": [
     {
       "tap": 1,
@@ -11,8 +15,9 @@
         "Nectaron",
         "Krush"
       ],
-      "accent": "#00d7d7",
-      "beerColor": "#f5a623"
+      "accent": "#00e6ff",
+      "beerColor": "#f4aa22",
+      "beerTop": "#ffe082"
     },
     {
       "tap": 2,
@@ -22,8 +27,9 @@
       "abv": "6,8",
       "ibu": "30",
       "extras": [],
-      "accent": "#ff1f17",
-      "beerColor": "#8f2616"
+      "accent": "#ff3a20",
+      "beerColor": "#8a2816",
+      "beerTop": "#bd5930"
     },
     {
       "tap": 3,
@@ -37,8 +43,9 @@
         "Vanille",
         "Tonka"
       ],
-      "accent": "#b42cff",
-      "beerColor": "#070505"
+      "accent": "#b835ff",
+      "beerColor": "#070504",
+      "beerTop": "#3a211b"
     },
     {
       "tap": 4,

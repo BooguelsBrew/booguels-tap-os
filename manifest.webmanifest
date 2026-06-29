@@ -1,9 +1,9 @@
 {
-  "name": "BOOGUELS TAP OS",
-  "short_name": "Tap OS",
+  "name": "BOOGUELS BREW TAPLIST",
+  "short_name": "Taplist",
   "start_url": "./index.html",
   "display": "fullscreen",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#030303",
+  "theme_color": "#030303",
   "orientation": "landscape"
 }
