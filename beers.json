@@ -1,5 +1,5 @@
 {
-  "version": "v10",
+  "version": "v11",
   "taps": [
     {
       "tap": 1,
@@ -10,7 +10,7 @@
       "ibu": "29",
       "extras": "Nectaron\nKrush",
       "accent": "cyan",
-      "glass": "westcoast"
+      "glass": "hazy"
     },
     {
       "tap": 2,
@@ -28,7 +28,7 @@
       "status": "online",
       "name": "Darkness",
       "style": "Pastry Stout",
-      "abv": "8",
+      "abv": "8,0",
       "ibu": "36",
       "extras": "Fèves cacao\nVanille\nTonka",
       "accent": "purple",

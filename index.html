@@ -6,91 +6,84 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="BOOGUELS TAP OS">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>BOOGUELS TAP OS V10</title>
+<title>BOOGUELS TAP OS V11</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 <main id="app">
+  <header class="top">
+    <div class="seal">CRAFTED<br>IN THE<br>DARK</div>
+    <div class="brand">
+      <div class="drop">♦</div>
+      <h1>BOOGUELS BREW TAPLIST</h1>
+      <p><span>3 ON TAP</span><b>•</b><span>3 COMING SOON</span></p>
+    </div>
+    <div class="place">BOOGUELS BREW<br><small>SARPOURENX, FRANCE</small></div>
+  </header>
+
   <section id="tapgrid"></section>
+
+  <footer class="dock">
+    <div class="dockItem">✎<span>ÉDITER</span><small>Maintenir 2s</small></div>
+    <div class="dockItem">🍺<span>BIBLIOTHÈQUE</span><small>Verres & styles</small></div>
+    <div class="dockItem">◉<span>COULEURS</span><small>Halo</small></div>
+    <div class="logo">♦</div>
+    <div class="dockItem">☁<span>SAUVEGARDES</span><small>Données locales</small></div>
+    <div class="dockItem">⚙<span>RÉGLAGES</span><small>Taplist</small></div>
+    <button id="presentationBtn">PRÉSENTATION</button>
+  </footer>
 </main>
 
 <div id="modal" class="modal hidden">
   <form id="tapForm" class="panel">
     <div class="panelHead">
-      <h2 id="modalTitle">Tap</h2>
+      <h2 id="modalTitle">Modifier Tap</h2>
       <button type="button" id="closeBtn">×</button>
     </div>
 
     <label>Statut
-      <select id="status">
-        <option value="online">En service</option>
-        <option value="empty">Empty Tap</option>
-      </select>
+      <select id="status"><option value="online">En service</option><option value="empty">Empty Tap</option></select>
     </label>
 
-    <label>Nom
-      <input id="name" autocomplete="off">
-    </label>
-
-    <label>Style
-      <input id="style" autocomplete="off">
-    </label>
+    <label>Nom <input id="name" autocomplete="off"></label>
+    <label>Style <input id="style" autocomplete="off"></label>
 
     <div class="two">
-      <label>ABV %
-        <input id="abv" autocomplete="off">
-      </label>
-      <label>IBU
-        <input id="ibu" autocomplete="off">
-      </label>
+      <label>ABV % <input id="abv" autocomplete="off"></label>
+      <label>IBU <input id="ibu" autocomplete="off"></label>
     </div>
 
     <label>Houblons / ingrédients
-      <textarea id="extras" rows="3" placeholder="Une ligne par ingrédient"></textarea>
+      <textarea id="extras" rows="3"></textarea>
     </label>
 
     <div class="two">
       <label>Couleur
         <select id="accent">
-          <option value="cyan">Cyan</option>
-          <option value="red">Rouge</option>
-          <option value="purple">Violet</option>
-          <option value="orange">Orange</option>
-          <option value="green">Vert</option>
-          <option value="blue">Bleu</option>
-          <option value="gold">Or</option>
-          <option value="grey">Gris</option>
+          <option value="cyan">Cyan</option><option value="red">Rouge</option><option value="purple">Violet</option>
+          <option value="orange">Orange</option><option value="green">Vert</option><option value="blue">Bleu</option>
+          <option value="gold">Or</option><option value="grey">Gris</option>
         </select>
       </label>
       <label>Verre
         <select id="glass">
-          <option value="hazy">Hazy IPA</option>
-          <option value="westcoast">West Coast / Pale</option>
-          <option value="pilsner">Pilsner</option>
-          <option value="kolsch">Kölsch</option>
-          <option value="stout">Stout</option>
-          <option value="pastry">Pastry Stout</option>
-          <option value="sour">Sour / Gose</option>
-          <option value="wheat">Wheat</option>
-          <option value="brown">Brown Ale</option>
-          <option value="oldale">Old Ale</option>
-          <option value="barleywine">Barleywine</option>
-          <option value="empty">Verre vide</option>
+          <option value="hazy">Hazy / Pale</option><option value="westcoast">West Coast</option><option value="pilsner">Pilsner</option>
+          <option value="kolsch">Kölsch</option><option value="stout">Stout</option><option value="pastry">Pastry Stout</option>
+          <option value="sour">Sour / Gose</option><option value="wheat">Wheat</option><option value="brown">Brown Ale</option>
+          <option value="oldale">Old Ale</option><option value="barleywine">Barleywine</option><option value="empty">Verre vide</option>
         </select>
       </label>
     </div>
 
-    <div id="preview" class="preview"></div>
-
     <div class="actions">
-      <button type="button" id="resetBtn">Reset local</button>
+      <button type="button" id="resetBtn">Reset</button>
       <button type="button" id="emptyBtn">Empty Tap</button>
       <button type="submit" class="save">Sauvegarder</button>
     </div>
   </form>
 </div>
 
-<script src="app.js?v=10"></script>
+<script src="app.js?v=11"></script>
 </body>
 </html>
