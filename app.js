@@ -1,16 +1,48 @@
 
-const accentColors={cyan:"#00dbe5",orange:"#e88b21",red:"#ff3528",purple:"#a93cff",green:"#65d875",blue:"#418cff",gold:"#c39a4e",grey:"#5f5a51"};
-const beerLooks={gold:["#ffe985","#f3a217","#fff0d6"],amber:["#d64b1f","#5b160d","#e2af78"],stout:["#2b130e","#020101","#b87644"],redbeer:["#c4311f","#5b1008","#e2a270"],sour:["#ff98b5","#d84570","#fff0e2"],empty:["#222","#111","#ddd"]};
-let state,activeTap,holdTimer;
-async function load(){const saved=localStorage.getItem("bb-taplist-locked");if(saved){state=JSON.parse(saved)}else{state=await (await fetch("beers.json?v=locked10",{cache:"no-store"})).json()}render()}
-function save(){localStorage.setItem("bb-taplist-locked",JSON.stringify(state))}
-function cssFor(t){const a=accentColors[t.accent]||accentColors.grey;const b=beerLooks[t.beer]||beerLooks.gold;return `--accent:${a};--beerTop:${b[0]};--beerBottom:${b[1]};--foam:${b[2]}`}
-function card(t){const empty=t.status!=="online";return `<section class="tap ${empty?"empty":"online"}" data-tap="${t.tap}" style="${cssFor(t)}"><div class="num">${t.tap}</div><div class="info"><div class="name">${empty?"EMPTY TAP":t.name}</div><div class="style">${empty?"COMING SOON":t.style}</div><div class="ingredients">${empty?"":String(t.extras||"").replace(/\n/g," • ")}</div><div class="stats"><div><div class="value">${empty?"--":t.abv+"%"}</div><div class="label">ABV</div></div><div><div class="value">${empty?"--":t.ibu}</div><div class="label">IBU</div></div></div></div><div class="glassbox"><div class="pint"><div class="beer"></div><div class="foam"></div></div></div></section>`}
-function render(){grid.innerHTML=state.taps.sort((a,b)=>a.tap-b.tap).map(card).join("");document.querySelectorAll(".tap").forEach(el=>{const n=+el.dataset.tap;el.addEventListener("touchstart",()=>holdTimer=setTimeout(()=>openEditor(n),750));el.addEventListener("touchend",()=>clearTimeout(holdTimer));el.addEventListener("mousedown",()=>holdTimer=setTimeout(()=>openEditor(n),750));el.addEventListener("mouseup",()=>clearTimeout(holdTimer));el.addEventListener("dblclick",()=>openEditor(n))})}
-function openEditor(n){activeTap=state.taps.find(t=>t.tap===n);editorTitle.textContent="BEC "+n;status.value=activeTap.status||"online";name.value=activeTap.name||"";style.value=activeTap.style||"";abv.value=activeTap.abv||"";ibu.value=activeTap.ibu||"";extras.value=activeTap.extras||"";accent.value=activeTap.accent||"cyan";beer.value=activeTap.beer||"gold";editor.classList.remove("hidden")}
-function close(){editor.classList.add("hidden")}
-closeEditor.onclick=close;
-emptyTap.onclick=()=>{Object.assign(activeTap,{status:"empty",name:"Empty Tap",style:"Coming Soon",abv:"",ibu:"",extras:"",accent:"grey",beer:"empty"});save();render();close()};
-resetLocal.onclick=()=>{localStorage.removeItem("bb-taplist-locked");location.reload()};
-saveTap.onclick=()=>{Object.assign(activeTap,{status:status.value,name:name.value,style:style.value,abv:abv.value,ibu:ibu.value,extras:extras.value,accent:accent.value,beer:beer.value});if(activeTap.status==="empty")Object.assign(activeTap,{name:"Empty Tap",style:"Coming Soon",abv:"",ibu:"",extras:"",accent:"grey",beer:"empty"});save();render();close()};
-load();if("serviceWorker"in navigator)navigator.serviceWorker.register("./sw.js?v=locked10").catch(()=>{});
+let state = null;
+let current = null;
+
+async function load(){
+  const saved = localStorage.getItem('bb-master-app');
+  if(saved){ state = JSON.parse(saved); }
+  else {
+    const r = await fetch('beers.json?v=master1', {cache:'no-store'});
+    state = await r.json();
+  }
+}
+function persist(){ localStorage.setItem('bb-master-app', JSON.stringify(state)); }
+
+function openTap(n){
+  current = state.taps.find(t => t.tap === n);
+  title.textContent = 'Bec ' + n;
+  status.value = current.status || 'online';
+  name.value = current.name || '';
+  style.value = current.style || '';
+  abv.value = current.abv || '';
+  ibu.value = current.ibu || '';
+  extras.value = current.extras || '';
+  editor.classList.remove('hidden');
+}
+document.querySelectorAll('.zone').forEach(z=>{
+  z.addEventListener('click',()=>openTap(Number(z.dataset.tap)));
+});
+close.onclick = () => editor.classList.add('hidden');
+save.onclick = () => {
+  if(!current) return;
+  Object.assign(current, {
+    status: status.value,
+    name: name.value,
+    style: style.value,
+    abv: abv.value,
+    ibu: ibu.value,
+    extras: extras.value
+  });
+  persist();
+  editor.classList.add('hidden');
+};
+
+load();
+
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./sw.js?v=master1').catch(()=>{});
+}
