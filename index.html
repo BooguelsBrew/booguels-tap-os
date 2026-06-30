@@ -8,41 +8,47 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>BOOGUELS BREW TAPLIST</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=master1">
+<link rel="stylesheet" href="style.css?v=master2">
 </head>
 <body>
 <main class="screen">
-  <img src="master.png?v=master1" class="master" alt="BOOGUELS BREW TAPLIST">
-  <button class="zone z1" data-tap="1"></button>
-  <button class="zone z2" data-tap="2"></button>
-  <button class="zone z3" data-tap="3"></button>
-  <button class="zone z4" data-tap="4"></button>
-  <button class="zone z5" data-tap="5"></button>
-  <button class="zone z6" data-tap="6"></button>
+  <div id="board" class="board">
+    <img src="master.png?v=master2" class="master" alt="BOOGUELS BREW TAPLIST">
+    <button class="zone z1" data-tap="1" aria-label="Bec 1"></button>
+    <button class="zone z2" data-tap="2" aria-label="Bec 2"></button>
+    <button class="zone z3" data-tap="3" aria-label="Bec 3"></button>
+    <button class="zone z4" data-tap="4" aria-label="Bec 4"></button>
+    <button class="zone z5" data-tap="5" aria-label="Bec 5"></button>
+    <button class="zone z6" data-tap="6" aria-label="Bec 6"></button>
+  </div>
 </main>
 
 <aside id="editor" class="editor hidden">
   <div class="top">
     <h2 id="title">Bec</h2>
-    <button id="close">×</button>
+    <button id="close" type="button">×</button>
   </div>
+
   <label>Statut
     <select id="status">
       <option value="online">En service</option>
       <option value="empty">Empty Tap</option>
     </select>
   </label>
+
   <label>Nom <input id="name"></label>
   <label>Style <input id="style"></label>
+
   <div class="two">
     <label>ABV <input id="abv"></label>
     <label>IBU <input id="ibu"></label>
   </div>
+
   <label>Houblons / ingrédients <textarea id="extras" rows="4"></textarea></label>
-  <p class="note">Cette version affiche le master graphique verrouillé en haute qualité. Les champs sont prêts pour la prochaine étape dynamique.</p>
-  <button id="save">Sauvegarder</button>
+
+  <button id="save" type="button">Sauvegarder</button>
 </aside>
 
-<script src="app.js?v=master1"></script>
+<script src="app.js?v=master2"></script>
 </body>
 </html>
