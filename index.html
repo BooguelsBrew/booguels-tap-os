@@ -1,20 +1,98 @@
-<!doctype html><html lang="fr"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="BOOGUELS TAPLIST">
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BOOGUELS TAPLIST">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>BOOGUELS BREW TAPLIST</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css?v=final2">
-</head><body>
+<title>BOOGUELS BREW TAPLIST</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css?v=locked10">
+</head>
+<body>
 <main id="app">
-<header class="header"><div class="brandMark">♦</div><div class="brandText"><h1>BOOGUELS BREW TAPLIST</h1><p>3 ON TAP • 3 COMING SOON</p></div></header>
-<section id="tapgrid"></section>
+  <header class="title">
+    <h1>BOOGUELS BREW TAPLIST</h1>
+    <div class="subline">
+      <span>TOUR GAUCHE</span>
+      <i></i>
+      <span>TOUR DROITE</span>
+    </div>
+  </header>
+
+  <section id="grid"></section>
+
+  <footer class="hint">☝︎ APPUI LONG SUR UN BEC POUR MODIFIER</footer>
 </main>
+
 <aside id="editor" class="editor hidden">
-<div class="editorTop"><h2 id="editorTitle">TAP</h2><button id="closeEditor" type="button">×</button></div>
-<label>Statut<select id="status"><option value="online">En service</option><option value="empty">Empty Tap</option></select></label>
-<label>Nom<input id="name"></label><label>Style<input id="style"></label>
-<div class="split"><label>ABV<input id="abv"></label><label>IBU<input id="ibu"></label></div>
-<label>Houblons / ingrédients<textarea id="extras" rows="4"></textarea></label>
-<div class="split"><label>Couleur<select id="accent"><option value="cyan">Cyan</option><option value="red">Rouge</option><option value="purple">Violet</option><option value="orange">Orange</option><option value="green">Vert</option><option value="blue">Bleu</option><option value="gold">Or</option><option value="grey">Gris</option></select></label>
-<label>Look bière<select id="beer"><option value="gold">Blonde / Pale</option><option value="amber">Ambrée / Old Ale</option><option value="stout">Stout</option><option value="redbeer">Red Ale</option><option value="sour">Sour / Gose</option><option value="empty">Verre vide</option></select></label></div>
-<div class="buttons"><button id="emptyTap" type="button">Empty Tap</button><button id="resetLocal" type="button">Reset</button><button id="saveTap" type="button" class="primary">Sauvegarder</button></div>
-</aside><script src="app.js?v=final2"></script></body></html>
+  <div class="editorTop">
+    <h2 id="editorTitle">BEC</h2>
+    <button id="closeEditor">×</button>
+  </div>
+
+  <label>Statut
+    <select id="status">
+      <option value="online">En service</option>
+      <option value="empty">Empty Tap</option>
+    </select>
+  </label>
+
+  <label>Nom
+    <input id="name" autocomplete="off">
+  </label>
+
+  <label>Style
+    <input id="style" autocomplete="off">
+  </label>
+
+  <div class="split">
+    <label>ABV
+      <input id="abv" autocomplete="off">
+    </label>
+    <label>IBU
+      <input id="ibu" autocomplete="off">
+    </label>
+  </div>
+
+  <label>Houblons / ingrédients
+    <textarea id="extras" rows="4" placeholder="Une ligne par ingrédient"></textarea>
+  </label>
+
+  <div class="split">
+    <label>Couleur
+      <select id="accent">
+        <option value="cyan">Cyan</option>
+        <option value="orange">Orange</option>
+        <option value="red">Rouge</option>
+        <option value="purple">Violet</option>
+        <option value="green">Vert</option>
+        <option value="blue">Bleu</option>
+        <option value="gold">Or</option>
+        <option value="grey">Gris</option>
+      </select>
+    </label>
+
+    <label>Look bière
+      <select id="beer">
+        <option value="gold">Blonde / Pale</option>
+        <option value="amber">Ambrée / Old Ale</option>
+        <option value="stout">Stout</option>
+        <option value="redbeer">Red Ale</option>
+        <option value="sour">Sour / Gose</option>
+        <option value="empty">Verre vide</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="buttons">
+    <button id="emptyTap">EMPTY TAP</button>
+    <button id="resetLocal">RESET</button>
+    <button id="saveTap" class="primary">SAUVEGARDER</button>
+  </div>
+</aside>
+
+<script src="app.js?v=locked10"></script>
+</body>
+</html>
