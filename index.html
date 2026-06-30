@@ -8,91 +8,32 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>BOOGUELS BREW TAPLIST</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=20f">
+<link rel="stylesheet" href="style.css?v=30p">
 </head>
 <body>
 <main id="app">
   <header>
     <h1>BOOGUELS BREW TAPLIST</h1>
-    <div class="tours">
-      <span>TOUR GAUCHE</span>
-      <i></i>
-      <span>TOUR DROITE</span>
-    </div>
+    <div class="tours"><span>TOUR GAUCHE</span><i></i><span>TOUR DROITE</span></div>
   </header>
-
   <section id="grid"></section>
-
-  <footer>APPUI LONG SUR UN BEC POUR MODIFIER</footer>
+  <footer><span>APPUI LONG POUR MODIFIER</span><button id="presentBtn">PRÉSENTATION</button></footer>
 </main>
 
-<aside id="editor" class="editor hidden">
-  <div class="top">
-    <h2 id="editorTitle">BEC</h2>
-    <button id="closeBtn" type="button">×</button>
-  </div>
-
-  <label>Statut
-    <select id="status">
-      <option value="online">En service</option>
-      <option value="empty">Empty Tap</option>
-    </select>
-  </label>
-
-  <label>Nom
-    <input id="name" autocomplete="off">
-  </label>
-
-  <label>Style
-    <input id="style" autocomplete="off">
-  </label>
-
+<aside id="editor" class="panel hidden">
+  <div class="top"><h2 id="editorTitle">BEC</h2><button id="closeBtn" type="button">×</button></div>
+  <label>Statut<select id="status"><option value="online">En service</option><option value="empty">Empty Tap</option></select></label>
+  <label>Nom<input id="name"></label>
+  <label>Style<input id="style"></label>
+  <div class="two"><label>ABV<input id="abv"></label><label>IBU<input id="ibu"></label></div>
+  <label>Houblons / ingrédients<textarea id="extras" rows="4"></textarea></label>
   <div class="two">
-    <label>ABV
-      <input id="abv" autocomplete="off">
-    </label>
-    <label>IBU
-      <input id="ibu" autocomplete="off">
-    </label>
+    <label>Couleur<select id="accent"><option value="cyan">Cyan</option><option value="orange">Orange</option><option value="red">Rouge</option><option value="purple">Violet</option><option value="green">Vert</option><option value="blue">Bleu</option><option value="gold">Or</option><option value="grey">Gris</option></select></label>
+    <label>Look bière<select id="beer"><option value="gold">Blonde / Pale</option><option value="amber">Ambrée</option><option value="stout">Stout</option><option value="redbeer">Red Ale</option><option value="sour">Sour</option><option value="empty">Verre vide</option></select></label>
   </div>
-
-  <label>Houblons / ingrédients
-    <textarea id="extras" rows="4" placeholder="Une ligne par ingrédient"></textarea>
-  </label>
-
-  <div class="two">
-    <label>Couleur
-      <select id="accent">
-        <option value="cyan">Cyan</option>
-        <option value="orange">Orange</option>
-        <option value="red">Rouge</option>
-        <option value="purple">Violet</option>
-        <option value="green">Vert</option>
-        <option value="blue">Bleu</option>
-        <option value="gold">Or</option>
-        <option value="grey">Gris</option>
-      </select>
-    </label>
-
-    <label>Bière
-      <select id="beer">
-        <option value="gold">Blonde / Pale</option>
-        <option value="amber">Ambrée</option>
-        <option value="stout">Stout</option>
-        <option value="redbeer">Red Ale</option>
-        <option value="sour">Sour</option>
-        <option value="empty">Verre vide</option>
-      </select>
-    </label>
-  </div>
-
-  <div class="buttons">
-    <button id="emptyBtn" type="button">Empty Tap</button>
-    <button id="resetBtn" type="button">Reset</button>
-    <button id="saveBtn" type="button" class="primary">Sauvegarder</button>
-  </div>
+  <div class="buttons"><button id="emptyBtn">EMPTY TAP</button><button id="resetBtn">RESET</button><button id="saveBtn" class="primary">SAUVEGARDER</button></div>
 </aside>
 
-<script src="app.js?v=20f"></script>
+<script src="app.js?v=30p"></script>
 </body>
 </html>
