@@ -1,5 +1,5 @@
 {
-  "version": "v11",
+  "version": "final",
   "taps": [
     {
       "tap": 1,
@@ -10,7 +10,7 @@
       "ibu": "29",
       "extras": "Nectaron\nKrush",
       "accent": "cyan",
-      "glass": "hazy"
+      "beer": "gold"
     },
     {
       "tap": 2,
@@ -21,7 +21,7 @@
       "ibu": "30",
       "extras": "",
       "accent": "red",
-      "glass": "oldale"
+      "beer": "amber"
     },
     {
       "tap": 3,
@@ -32,7 +32,7 @@
       "ibu": "36",
       "extras": "Fèves cacao\nVanille\nTonka",
       "accent": "purple",
-      "glass": "pastry"
+      "beer": "stout"
     },
     {
       "tap": 4,
@@ -43,7 +43,7 @@
       "ibu": "",
       "extras": "",
       "accent": "grey",
-      "glass": "empty"
+      "beer": "empty"
     },
     {
       "tap": 5,
@@ -54,7 +54,7 @@
       "ibu": "",
       "extras": "",
       "accent": "grey",
-      "glass": "empty"
+      "beer": "empty"
     },
     {
       "tap": 6,
@@ -65,7 +65,7 @@
       "ibu": "",
       "extras": "",
       "accent": "grey",
-      "glass": "empty"
+      "beer": "empty"
     }
   ]
 }
